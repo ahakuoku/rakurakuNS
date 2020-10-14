@@ -37,6 +37,7 @@ if not errorlevel 1  (
 	) 
 ) 
 :loop
+	call setting.bat
 	rem Ž©“®Ä‹N“®
 	tasklist | find !exename! > nul
 	if not errorlevel 1  (

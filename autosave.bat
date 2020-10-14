@@ -14,9 +14,9 @@ if !autosaveinterval! lss 60 (
 	exit /b 0
 ) 
 
-set /a interval=!autosaveinterval!-30
-
 :loop
+call setting.bat
+set /a interval=!autosaveinterval!-30
 nettool -p !nettoolpass! -s !serverip! say "Autosave soon."
 echo [!DATE! !TIME!]メッセージを送信しました。
 timeout /t 30 /nobreak >nul
