@@ -1,0 +1,18 @@
+rem 設定
+set usingnettool=0
+set nettoolpass=""
+set startfile=sim-WinGDI64-OTRP.exe
+set serversave=server13353-network.sve
+set autosave=autosave-pak.sve
+set exename="sim-WinGDI64-OTRP.exe"
+set serverip="127.0.0.1:13353"
+set 0companypass=""
+set autosaveinterval=1800
+set pressspacekey=
+set ban-ip1=""
+set ban-ip2=""
+set ban-ip3=""
+set ban-ip4=""
+set ban-ip5=""
+
+rem 詳細は付属のreadme.txtを参照してください。
