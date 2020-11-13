@@ -15,4 +15,4 @@ set ban-ip3=""
 set ban-ip4=""
 set ban-ip5=""
 
-rem 詳細は付属のreadme.txtを参照してください。
+rem 詳細は https://github.com/ahakuoku/rakurakuNS/blob/main/readme.md を参照してください。
