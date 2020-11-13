@@ -9,8 +9,10 @@ SimutransのNSを管理するツールです。
 1. らくらくNSをDLする  
 1. zipを解凍し、サーバーの実行ファイルが入っている所と同じディレクトリにbatとmoduleフォルダを入れる
 # ダウンロード
-ダウンロードはこちらから行えます。**(2020年10月16日　v1.0.0に更新)**  
-https://drive.google.com/uc?export=download&id=1bbCg_iEJQY2oLwMW7I4ddbXiAsQ7vDBv
+ダウンロードはこちらから行えます。**(2020年10月16日　v1.0.1に更新)**  
+https://drive.google.com/uc?id=1V_Mn-fOnuv2Vyc_G4BSOz5LG0LTVjFsv  
+過去バージョンはこちら  
+https://drive.google.com/drive/folders/1evLJx78f47vGNYuJIuvNgkNfmpygWu_A
 
 # 使用条件
 著作権は作者であるahakuokuが保有しています。  
@@ -33,11 +35,11 @@ setting.bat   … 設定ファイルです。使用する前にここを弄っ�
 - startfile	 … サーバーがクラッシュした際に起動するファイルを設定します。-server オプションをつけたショートカットを起動するなどに使用できます。
 - serversave	 … サーバーが読み込むセーブデーターを指定します。
 - autosave	 … サーバーを×ボタンで終了した場合に生成されるセーブデーターを指定します。
-- exename		 … 実際に起動するサーバーのファイル名を指定します。サーバーが動いているかのチェックに使用します。
+- exename		 … サーバーのファイル名を指定します。サーバーが動いているかのチェックに使用します。
 - serverip	 … サーバーのIPアドレスを指定します。
 - 0companypass	 … デフォルト会社のパスワードを指定します。usingnettoolが0の場合は使用しません。
 - autosaveinterval … オートセーブの間隔を指定します。usingnettoolが0の場合は使用しません。
-- pressspacekey	 … 自動再起動の後にスペースキーを自動で押すかどうかを指定します。pak重複警告の回避に使用できます。
+- pressspacekey	 … 自動再起動の後にスペースキーを自動で押すかどうかを指定します。pak重複警告の回避に使用できます。1の場合に有効になります。
 - ban-ip1		 … BANするIPアドレスを指定します。
 - ban-ip2		 … 同上
 - ban-ip3		 … 同上
@@ -55,7 +57,10 @@ setting.bat   … 設定ファイルです。使用する前にここを弄っ�
 自動的にサーバーを安全な状態で停止します。サーバー停止の前にautostart.batを終了させてください。動作にはnettoolが必要です。
 
 # 更新履歴
-- 現在の最新バージョンは、version 1.0.0です。
+- 現在の最新バージョンは、version 1.0.1です。
 
-## version 1.0.0
+## version 1.0.1(2020/11/13)
+autosaveフォルダにコピーするファイルが誤っていた問題を修正しました。
+
+## version 1.0.0(2020/10/16)
 初の正式版です。
