@@ -38,7 +38,7 @@ setting.bat   … 設定ファイルです。使用する前にここを弄っ�
 - exename		 … サーバーのファイル名を指定します。サーバーが動いているかのチェックに使用します。
 - serverip	 … サーバーのIPアドレスを指定します。
 - 0companypass	 … デフォルト会社のパスワードを指定します。usingnettoolが0の場合は使用しません。
-- autosaveinterval … オートセーブの間隔を指定します。usingnettoolが0の場合は使用しません。
+- autosaveinterval … オートセーブの間隔を秒で指定します。usingnettoolが0の場合は使用しません。60未満にはできません。
 - pressspacekey	 … 自動再起動の後にスペースキーを自動で押すかどうかを指定します。pak重複警告の回避に使用できます。1の場合に有効になります。
 - ban-ip1		 … BANするIPアドレスを指定します。
 - ban-ip2		 … 同上
