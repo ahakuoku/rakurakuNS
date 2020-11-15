@@ -9,9 +9,9 @@ SimutransのNSを管理するツールです。
 1. らくらくNSをDLする  
 1. zipを解凍し、サーバーの実行ファイルが入っている所と同じディレクトリにbatとmoduleフォルダを入れる
 # ダウンロード
-ダウンロードはこちらから行えます。**(2020年10月16日　v1.0.1に更新)**  
-https://drive.google.com/uc?id=1V_Mn-fOnuv2Vyc_G4BSOz5LG0LTVjFsv  
-過去バージョンはこちら  
+ダウンロードはこちらから行えます。**(2020年11月15日　v1.1.0に更新)**  
+https://github.com/ahakuoku/rakurakuNS/releases  
+1.0.1以前のバージョンはこちら  
 https://drive.google.com/drive/folders/1evLJx78f47vGNYuJIuvNgkNfmpygWu_A
 
 # 使用条件
