@@ -56,6 +56,10 @@ setting.bat   … 設定ファイルです。使用する前にここを弄っ�
 ## autoclose.bat
 自動的にサーバーを安全な状態で停止します。サーバー停止の前にautostart.batを終了させてください。動作にはnettoolが必要です。
 
+# 謝辞
+- module/worktime.batはhttps://qiita.com/koryuohproject/items/815a1621bc34a223e4b9 のものを使用させていただきました。
+ありがとうございます。
+
 # 更新履歴
 - 現在の最新バージョンは、version 1.1.0です。
 
