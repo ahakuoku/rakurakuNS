@@ -61,7 +61,7 @@ setting.bat   … 設定ファイルです。使用する前にここを弄っ�
 
 ## version 1.1.0(2020/11/15)
 - オートセーブをするたびにオートセーブの時刻がずれていく現象の軽減をしました。
-- module/worktime.batはhttps://qiita.com/koryuohproject/items/815a1621bc34a223e4b9のコードを引用しました。
+- module/worktime.batはhttps://qiita.com/koryuohproject/items/815a1621bc34a223e4b9 のコードを引用しました。
 
 ## version 1.0.1(2020/11/13)
 - autosaveフォルダにコピーするファイルが誤っていた問題を修正しました。
