@@ -16,8 +16,6 @@ if "!new_filename!" == "n" (
 	exit /b 0
 ) 
 
-rem set !exename:~1,-1!
-
 set /p exename="起動中の本体のファイル名を入力してください。「n」と入力するとキャンセルします。"
 if "!new_filename!" == "n" (
 	echo "!strt_check!：処理を中止しました。"
@@ -33,9 +31,9 @@ if "!strt_check!" == "y" (
 	call module\autosave.bat
 	nettool -p !nettoolpass! -s !serverip! say "Maintenance start."
 	nettool -p !nettoolpass! -s !serverip! shutdown
-	ren !exename! server_old.exe
+	ren %exename% server_old.exe
 	timeout /t 1 /nobreak >nul
-	ren !new_filename! !exename!
+	ren %new_filename% %exename%
 	timeout /t 2 /nobreak >nul
 	start autostart.bat
 ) else (
