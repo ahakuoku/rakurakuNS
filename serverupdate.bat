@@ -9,14 +9,7 @@ if !usingnettool! == 0 (
 	exit /b 0
 ) 
 
-set /p new_filename="新しい本体のファイル名を入力してください。「n」と入力するとキャンセルします。"
-if "!new_filename!" == "n" (
-	echo "!strt_check!：処理を中止しました。"
-	pause >nul
-	exit /b 0
-) 
-
-set /p exename="起動中の本体のファイル名を入力してください。「n」と入力するとキャンセルします。"
+set /p new_filename="新しい本体のファイル名を入力してください。「n」と入力するとキャンセルします。："
 if "!new_filename!" == "n" (
 	echo "!strt_check!：処理を中止しました。"
 	pause >nul
@@ -32,9 +25,8 @@ if "!strt_check!" == "y" (
 	nettool -p !nettoolpass! -s !serverip! say "Maintenance start."
 	nettool -p !nettoolpass! -s !serverip! shutdown
 	ren %exename% server_old.exe
-	timeout /t 1 /nobreak >nul
 	ren %new_filename% %exename%
-	timeout /t 2 /nobreak >nul
+	timeout /t 2 /nobreak >nul	
 	start autostart.bat
 ) else (
 	echo "!strt_check!：処理を中止しました。"
