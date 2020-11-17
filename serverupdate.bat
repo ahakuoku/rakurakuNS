@@ -24,9 +24,9 @@ if "!strt_check!" == "y" (
 	call module\autosave.bat
 	nettool -p !nettoolpass! -s !serverip! say "Maintenance start."
 	nettool -p !nettoolpass! -s !serverip! shutdown
+	timeout /t 5 /nobreak >nul
 	ren %exename% server_old.exe
-	ren %new_filename% %exename%
-	timeout /t 2 /nobreak >nul	
+	ren %new_filename% %exename%	
 	start autostart.bat
 ) else (
 	echo "!strt_check!Fˆ—‚ğ’†~‚µ‚Ü‚µ‚½B"
