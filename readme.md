@@ -56,13 +56,19 @@ setting.bat   … 設定ファイルです。使用する前にここを弄っ�
 ## autoclose.bat
 自動的にサーバーを安全な状態で停止します。サーバー停止の前にautostart.batを終了させてください。動作にはnettoolが必要です。
 
+## serverupdate.bat
+サーバーの本体をアップデートします。
+
 # 謝辞
 - module/worktime.batはhttps://qiita.com/koryuohproject/items/815a1621bc34a223e4b9 のものを使用させていただきました。
 
 ありがとうございます。
 
 # 更新履歴
-- 現在の最新バージョンは、version 1.1.0です。
+- 現在の最新バージョンは、version 1.2.0です。
+
+## version 1.2.0(2020/11/19)
+- 本体自動置き換え機能を追加しました。serverupdate.batを起動して画面の指示に従ってください。古い本体はserver_old.exeとしてバックアップされます。
 
 ## version 1.1.0(2020/11/15)
 - オートセーブをするたびにオートセーブの時刻がずれていく現象の軽減をしました。
