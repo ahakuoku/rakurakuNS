@@ -3,11 +3,15 @@ setlocal enabledelayedexpansion
 
 call setting.bat
 
+rem 設定チェック
+
 if !usingnettool! == 0 (
 	echo このbatはsetting.bat内のusingnettoolを1にしないと使用できません。Enterキーを押すと終了します。
 	pause >nul
 	exit /b 0
 ) 
+
+rem 更新後の本体のファイル名入力
 
 set /p new_filename="新しい本体のファイル名を入力してください。「n」と入力するとキャンセルします。："
 if "!new_filename!" == "n" (
@@ -15,6 +19,8 @@ if "!new_filename!" == "n" (
 	pause >nul
 	exit /b 0
 ) 
+
+rem サーバーをアップデート
 
 set /p strt_check="サーバーの本体更新を開始します。よろしいですか？（Y/N）： "
 if "!strt_check!" == "y" (
