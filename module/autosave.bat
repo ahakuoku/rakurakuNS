@@ -1,4 +1,4 @@
-rem ã‚ªãƒ¼ãƒˆã‚»ãƒ¼ãƒ–
+rem ƒI[ƒgƒZ[ƒu
 del /q autosave\autosave_100.sve
 ren autosave\autosave_99.sve autosave_100.sve
 ren autosave\autosave_98.sve autosave_99.sve
@@ -101,4 +101,4 @@ ren autosave\autosave_2.sve autosave_3.sve
 ren autosave\autosave_1.sve autosave_2.sve
 copy !serversave! autosave\autosave_1.sve
 nettool -p !nettoolpass! -s !serverip! force-sync
-echo [!DATE! !TIME!]ã‚ªãƒ¼ãƒˆã‚»ãƒ¼ãƒ–ã—ã¾ã—ãŸã€‚
+echo [!DATE! !TIME!]ƒI[ƒgƒZ[ƒu‚µ‚Ü‚µ‚½B
