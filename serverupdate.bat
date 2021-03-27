@@ -1,31 +1,30 @@
 @echo off
 setlocal enabledelayedexpansion
-
+chcp 65001
 call setting.bat
-
-rem Ý’èƒ`ƒFƒbƒN
-
+rem ã“ã“ã¾ã§ãŠã¾ã˜ãªã„
+rem è¨­å®šæ¬¡ç¬¬ã§å¼¾ã
 if !usingnettool! == 0 (
-	echo ‚±‚Ìbat‚Ísetting.bat“à‚Ìusingnettool‚ð1‚É‚µ‚È‚¢‚ÆŽg—p‚Å‚«‚Ü‚¹‚ñBEnterƒL[‚ð‰Ÿ‚·‚ÆI—¹‚µ‚Ü‚·B
+	echo ã“ã®batã¯setting.batå†…ã®usingnettoolã‚’1ã«ã—ãªã„ã¨ä½¿ç”¨ã§ãã¾ã›ã‚“ã€‚Enterã‚­ãƒ¼ã‚’æŠ¼ã™ã¨çµ‚äº†ã—ã¾ã™ã€‚
 	pause >nul
 	exit /b 0
 ) 
 
-rem XVŒã‚Ì–{‘Ì‚Ìƒtƒ@ƒCƒ‹–¼“ü—Í
+rem æ›´æ–°å¾Œã®æœ¬ä½“ã®ãƒ•ã‚¡ã‚¤ãƒ«åå…¥åŠ›
 
-set /p new_filename="V‚µ‚¢–{‘Ì‚Ìƒtƒ@ƒCƒ‹–¼‚ð“ü—Í‚µ‚Ä‚­‚¾‚³‚¢Bunv‚Æ“ü—Í‚·‚é‚ÆƒLƒƒƒ“ƒZƒ‹‚µ‚Ü‚·BF"
+set /p new_filename="æ–°ã—ã„æœ¬ä½“ã®ãƒ•ã‚¡ã‚¤ãƒ«åã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚ã€Œnã€ã¨å…¥åŠ›ã™ã‚‹ã¨ã‚­ãƒ£ãƒ³ã‚»ãƒ«ã—ã¾ã™ã€‚ï¼š"
 if "!new_filename!" == "n" (
-	echo "!strt_check!Fˆ—‚ð’†Ž~‚µ‚Ü‚µ‚½B"
+	echo "!strt_check!ï¼šå‡¦ç†ã‚’ä¸­æ­¢ã—ã¾ã—ãŸã€‚"
 	pause >nul
 	exit /b 0
 ) 
 
-rem ƒT[ƒo[‚ðƒAƒbƒvƒf[ƒg
+rem ã‚µãƒ¼ãƒãƒ¼ã‚’ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆ
 
-set /p strt_check="ƒT[ƒo[‚Ì–{‘ÌXV‚ðŠJŽn‚µ‚Ü‚·B‚æ‚ë‚µ‚¢‚Å‚·‚©HiY/NjF "
+set /p strt_check="ã‚µãƒ¼ãƒãƒ¼ã®æœ¬ä½“æ›´æ–°ã‚’é–‹å§‹ã—ã¾ã™ã€‚ã‚ˆã‚ã—ã„ã§ã™ã‹ï¼Ÿï¼ˆY/Nï¼‰ï¼š "
 if "!strt_check!" == "y" (
 	nettool -p !nettoolpass! -s !serverip! say "Maintenance soon."
-	echo [!DATE! !TIME!]ƒƒbƒZ[ƒW‚ð‘—M‚µ‚Ü‚µ‚½BŽ©“®Ä‹N“®ƒc[ƒ‹‚Í—Ž‚Æ‚µ‚Ü‚µ‚½‚©H
+	echo [!DATE! !TIME!]ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’é€ä¿¡ã—ã¾ã—ãŸã€‚è‡ªå‹•å†èµ·å‹•ãƒ„ãƒ¼ãƒ«ã¯è½ã¨ã—ã¾ã—ãŸã‹ï¼Ÿ
 	timeout /t 30 /nobreak >nul
 	call module\autosave.bat
 	nettool -p !nettoolpass! -s !serverip! say "Maintenance start."
@@ -35,7 +34,7 @@ if "!strt_check!" == "y" (
 	ren %new_filename% %exename%	
 	start autostart.bat
 ) else (
-	echo "!strt_check!Fˆ—‚ð’†Ž~‚µ‚Ü‚µ‚½B"
+	echo "!strt_check!ï¼šå‡¦ç†ã‚’ä¸­æ­¢ã—ã¾ã—ãŸã€‚"
 	pause >nul
 	exit /b 0
 ) 

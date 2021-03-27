@@ -1,34 +1,34 @@
 @echo off
 setlocal enabledelayedexpansion
-
+chcp 65001
 call setting.bat
-rem ‚±‚±‚Ü‚Å‚¨‚Ü‚¶‚È‚¢
-rem Ý’èŽŸ‘æ‚Å’e‚­
+rem ã“ã“ã¾ã§ãŠã¾ã˜ãªã„
+rem è¨­å®šæ¬¡ç¬¬ã§å¼¾ã
 if !usingnettool! == 0 (
-	echo ‚±‚Ìbat‚Ísetting.bat“à‚Ìusingnettool‚ð1‚É‚µ‚È‚¢‚ÆŽg—p‚Å‚«‚Ü‚¹‚ñBEnterƒL[‚ð‰Ÿ‚·‚ÆI—¹‚µ‚Ü‚·B
+	echo ã“ã®batã¯setting.batå†…ã®usingnettoolã‚’1ã«ã—ãªã„ã¨ä½¿ç”¨ã§ãã¾ã›ã‚“ã€‚Enterã‚­ãƒ¼ã‚’æŠ¼ã™ã¨çµ‚äº†ã—ã¾ã™ã€‚
 	pause >nul
 	exit /b 0
 ) 
 if !autosaveinterval! lss 60 (
-	echo ‚±‚Ìbat‚ÍƒI[ƒgƒZ[ƒu‚ÌŠÔŠu‚ª60•bˆÈã‚Å‚È‚¢‚ÆŽg—p‚Å‚«‚Ü‚¹‚ñBEnterƒL[‚ð‰Ÿ‚·‚ÆI—¹‚µ‚Ü‚·B
+	echo ã“ã®batã¯ã‚ªãƒ¼ãƒˆã‚»ãƒ¼ãƒ–ã®é–“éš”ãŒ60ç§’ä»¥ä¸Šã§ãªã„ã¨ä½¿ç”¨ã§ãã¾ã›ã‚“ã€‚Enterã‚­ãƒ¼ã‚’æŠ¼ã™ã¨çµ‚äº†ã—ã¾ã™ã€‚
 	pause >nul
 	exit /b 0
 ) 
 
-rem –³ŒÀƒ‹[ƒv•”•ª
+rem ç„¡é™ãƒ«ãƒ¼ãƒ—éƒ¨åˆ†
 :loop
-	rem Ý’èÄ“Ç‚Ýž‚Ý¨Ý’è•b”‚©‚ç30•bˆø‚­
+	rem è¨­å®šå†èª­ã¿è¾¼ã¿â†’è¨­å®šç§’æ•°ã‹ã‚‰30ç§’å¼•ã
 	call setting.bat
 	set /a interval=!autosaveinterval!-30
-	rem ƒƒbƒZ[ƒW‘—M¨30•b‘Ò‹@
+	rem ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸é€ä¿¡â†’30ç§’å¾…æ©Ÿ
 	nettool -p !nettoolpass! -s !serverip! say "Autosave soon."
-	echo [!DATE! !TIME!]ƒƒbƒZ[ƒW‚ð‘—M‚µ‚Ü‚µ‚½B
+	echo [!DATE! !TIME!]ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’é€ä¿¡ã—ã¾ã—ãŸã€‚
 	timeout /t 30 /nobreak >nul
-	rem ƒI[ƒgƒZ[ƒu
+	rem ã‚ªãƒ¼ãƒˆã‚»ãƒ¼ãƒ–
 	call module\worktime.bat START
 	call module\autosave.bat
 	call module\worktime.bat STOP
-	rem Ý’è•b”‚©‚çƒI[ƒgƒZ[ƒu‚É‚©‚©‚Á‚½•b”‚ðŒ¸ŽZ
+	rem è¨­å®šç§’æ•°ã‹ã‚‰ã‚ªãƒ¼ãƒˆã‚»ãƒ¼ãƒ–ã«ã‹ã‹ã£ãŸç§’æ•°ã‚’æ¸›ç®—
 	set /a interval=!interval!-%DPS%
 	timeout /t "!interval!" /nobreak >nul
 goto loop

@@ -1,38 +1,38 @@
 @echo off
 setlocal enabledelayedexpansion
-
+chcp 65001
 call setting.bat
-rem ‚±‚±‚Ü‚Å‚¨‚Ü‚¶‚È‚¢
-rem ‰‰ñ‹N“®
-rem ŽI‚ª“®‚¢‚Ä‚é‚©ƒ`ƒFƒbƒN
+rem ã“ã“ã¾ã§ãŠã¾ã˜ãªã„
+rem åˆå›žèµ·å‹•
+rem é¯–ãŒå‹•ã„ã¦ã‚‹ã‹ãƒã‚§ãƒƒã‚¯
 tasklist | find !exename! > nul
 if not errorlevel 1  (
-	echo [!DATE! !TIME!]ƒT[ƒo[‚Í“®‚¢‚Ä‚¢‚Ü‚·B
+	echo [!DATE! !TIME!]ã‚µãƒ¼ãƒãƒ¼ã¯å‹•ã„ã¦ã„ã¾ã™ã€‚
 	timeout /t 10 /nobreak >nul
 ) else (
-	rem ŽI‚ª“®‚¢‚Ä‚¢‚È‚©‚Á‚½ê‡
-	echo [!DATE! !TIME!]ƒT[ƒo[‚ð‹N“®‚µ‚Ü‚·B
-	echo [!DATE! !TIME!]ƒT[ƒo[‚ð‹N“®‚µ‚Ü‚·B >> autostart_log.txt
-	rem ƒZ[ƒuƒtƒ@ƒCƒ‹ƒ`ƒFƒbƒN
+	rem é¯–ãŒå‹•ã„ã¦ã„ãªã‹ã£ãŸå ´åˆ
+	echo [!DATE! !TIME!]ã‚µãƒ¼ãƒãƒ¼ã‚’èµ·å‹•ã—ã¾ã™ã€‚
+	echo [!DATE! !TIME!]ã‚µãƒ¼ãƒãƒ¼ã‚’èµ·å‹•ã—ã¾ã™ã€‚ >> autostart_log.txt
+	rem ã‚»ãƒ¼ãƒ–ãƒ•ã‚¡ã‚¤ãƒ«ãƒã‚§ãƒƒã‚¯
 	if not exist !autosave! (
-		echo [!DATE! !TIME!]!autosave!‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñB!serversave!‚ðƒRƒs[‚µ‚Ü‚·B
-		echo [!DATE! !TIME!]!autosave!‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñB!serversave!‚ðƒRƒs[‚µ‚Ü‚·B >> autostart_log.txt
+		echo [!DATE! !TIME!]!autosave!ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã€‚!serversave!ã‚’ã‚³ãƒ”ãƒ¼ã—ã¾ã™ã€‚
+		echo [!DATE! !TIME!]!autosave!ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã€‚!serversave!ã‚’ã‚³ãƒ”ãƒ¼ã—ã¾ã™ã€‚ >> autostart_log.txt
 		copy !serversave! !autosave!
 	) else (
-		echo [!DATE! !TIME!]!autosave!‚ªŒ©‚Â‚©‚è‚Ü‚µ‚½B‚±‚ÌƒZ[ƒuƒf[ƒ^[‚Å‹N“®‚µ‚Ü‚·B
-		echo [!DATE! !TIME!]!autosave!‚ªŒ©‚Â‚©‚è‚Ü‚µ‚½B‚±‚ÌƒZ[ƒuƒf[ƒ^[‚Å‹N“®‚µ‚Ü‚·B >> autostart_log.txt
+		echo [!DATE! !TIME!]!autosave!ãŒè¦‹ã¤ã‹ã‚Šã¾ã—ãŸã€‚ã“ã®ã‚»ãƒ¼ãƒ–ãƒ‡ãƒ¼ã‚¿ãƒ¼ã§èµ·å‹•ã—ã¾ã™ã€‚
+		echo [!DATE! !TIME!]!autosave!ãŒè¦‹ã¤ã‹ã‚Šã¾ã—ãŸã€‚ã“ã®ã‚»ãƒ¼ãƒ–ãƒ‡ãƒ¼ã‚¿ãƒ¼ã§èµ·å‹•ã—ã¾ã™ã€‚ >> autostart_log.txt
 	) 
-	rem ŽI‹N“®
+	rem é¯–èµ·å‹•
 	start !startfile!
-	echo [!DATE! !TIME!]ƒT[ƒo[‚ð‹N“®‚µ‚Ü‚µ‚½B
-	echo [!DATE! !TIME!]ƒT[ƒo[‚ð‹N“®‚µ‚Ü‚µ‚½B >> autostart_log.txt
+	echo [!DATE! !TIME!]ã‚µãƒ¼ãƒãƒ¼ã‚’èµ·å‹•ã—ã¾ã—ãŸã€‚
+	echo [!DATE! !TIME!]ã‚µãƒ¼ãƒãƒ¼ã‚’èµ·å‹•ã—ã¾ã—ãŸã€‚ >> autostart_log.txt
 	timeout /t 30 /nobreak >nul
-	rem Ý’èŽŸ‘æ‚ÅƒXƒy[ƒXƒL[Ž©“®‰Ÿ‰º
+	rem è¨­å®šæ¬¡ç¬¬ã§ã‚¹ãƒšãƒ¼ã‚¹ã‚­ãƒ¼è‡ªå‹•æŠ¼ä¸‹
 	if !pressspacekey! == 1 (
 		start module\space.vbs
 		timeout /t 30 /nobreak >nul
 	) 
-	rem ‰ïŽÐŽ©“®ƒƒbƒNEŽ©“®BAN
+	rem ä¼šç¤¾è‡ªå‹•ãƒ­ãƒƒã‚¯ãƒ»è‡ªå‹•BAN
 	if !usingnettool! == 1 (
 		nettool -p !nettoolpass! -s !serverip! lock-company 0 !0companypass!
 		nettool -p !nettoolpass! -s !serverip! ban-ip !ban-ip1!
@@ -42,28 +42,28 @@ if not errorlevel 1  (
 		nettool -p !nettoolpass! -s !serverip! ban-ip !ban-ip5!
 	) 
 ) 
-rem –³ŒÀƒ‹[ƒv•”•ª ˆê•”•¶–Ê‚ªˆÙ‚È‚éˆÈŠO‚Í“¯ˆê
+rem ç„¡é™ãƒ«ãƒ¼ãƒ—éƒ¨åˆ† ä¸€éƒ¨æ–‡é¢ãŒç•°ãªã‚‹ä»¥å¤–ã¯åŒä¸€
 :loop
 	call setting.bat
-	rem Ž©“®Ä‹N“®
+	rem è‡ªå‹•å†èµ·å‹•
 	tasklist | find !exename! > nul
 	if not errorlevel 1  (
-		echo [!DATE! !TIME!]ƒT[ƒo[‚Í“®‚¢‚Ä‚¢‚Ü‚·B
+		echo [!DATE! !TIME!]ã‚µãƒ¼ãƒãƒ¼ã¯å‹•ã„ã¦ã„ã¾ã™ã€‚
 		timeout /t 10 /nobreak >nul
 	) else (
-		echo [!DATE! !TIME!]ƒT[ƒo[ƒ_ƒEƒ“‚ðŒŸo‚µ‚Ü‚µ‚½BŽ©“®“I‚ÉÄ‹N“®‚µ‚Ü‚·B
-		echo [!DATE! !TIME!]ƒT[ƒo[ƒ_ƒEƒ“‚ðŒŸo‚µ‚Ü‚µ‚½BŽ©“®“I‚ÉÄ‹N“®‚µ‚Ü‚·B >> autostart_log.txt
+		echo [!DATE! !TIME!]ã‚µãƒ¼ãƒãƒ¼ãƒ€ã‚¦ãƒ³ã‚’æ¤œå‡ºã—ã¾ã—ãŸã€‚è‡ªå‹•çš„ã«å†èµ·å‹•ã—ã¾ã™ã€‚
+		echo [!DATE! !TIME!]ã‚µãƒ¼ãƒãƒ¼ãƒ€ã‚¦ãƒ³ã‚’æ¤œå‡ºã—ã¾ã—ãŸã€‚è‡ªå‹•çš„ã«å†èµ·å‹•ã—ã¾ã™ã€‚ >> autostart_log.txt
 		if not exist !autosave! (
-			echo [!DATE! !TIME!]!autosave!‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñB!serversave!‚ðƒRƒs[‚µ‚Ü‚·B
-			echo [!DATE! !TIME!]!autosave!‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñB!serversave!‚ðƒRƒs[‚µ‚Ü‚·B >> autostart_log.txt
+			echo [!DATE! !TIME!]!autosave!ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã€‚!serversave!ã‚’ã‚³ãƒ”ãƒ¼ã—ã¾ã™ã€‚
+			echo [!DATE! !TIME!]!autosave!ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã€‚!serversave!ã‚’ã‚³ãƒ”ãƒ¼ã—ã¾ã™ã€‚ >> autostart_log.txt
 			copy !serversave! !autosave!
 		) else (
-			echo [!DATE! !TIME!]!autosave!‚ªŒ©‚Â‚©‚è‚Ü‚µ‚½B‚±‚ÌƒZ[ƒuƒf[ƒ^[‚Å‹N“®‚µ‚Ü‚·B
-			echo [!DATE! !TIME!]!autosave!‚ªŒ©‚Â‚©‚è‚Ü‚µ‚½B‚±‚ÌƒZ[ƒuƒf[ƒ^[‚Å‹N“®‚µ‚Ü‚·B >> autostart_log.txt
+			echo [!DATE! !TIME!]!autosave!ãŒè¦‹ã¤ã‹ã‚Šã¾ã—ãŸã€‚ã“ã®ã‚»ãƒ¼ãƒ–ãƒ‡ãƒ¼ã‚¿ãƒ¼ã§èµ·å‹•ã—ã¾ã™ã€‚
+			echo [!DATE! !TIME!]!autosave!ãŒè¦‹ã¤ã‹ã‚Šã¾ã—ãŸã€‚ã“ã®ã‚»ãƒ¼ãƒ–ãƒ‡ãƒ¼ã‚¿ãƒ¼ã§èµ·å‹•ã—ã¾ã™ã€‚ >> autostart_log.txt
 		) 
 		start !startfile!
-		echo [!DATE! !TIME!]ƒT[ƒo[‚ð‹N“®‚µ‚Ü‚µ‚½B
-		echo [!DATE! !TIME!]ƒT[ƒo[‚ð‹N“®‚µ‚Ü‚µ‚½B >> autostart_log.txt
+		echo [!DATE! !TIME!]ã‚µãƒ¼ãƒãƒ¼ã‚’èµ·å‹•ã—ã¾ã—ãŸã€‚
+		echo [!DATE! !TIME!]ã‚µãƒ¼ãƒãƒ¼ã‚’èµ·å‹•ã—ã¾ã—ãŸã€‚ >> autostart_log.txt
 		timeout /t 30 /nobreak >nul
 		if !pressspacekey! == 1 (
 			start module\space.vbs
