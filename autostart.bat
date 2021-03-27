@@ -42,7 +42,7 @@ if not errorlevel 1  (
 		nettool -p !nettoolpass! -s !serverip! ban-ip !ban-ip5!
 	) 
 ) 
-rem 無限ループ部分 一部文面が異なる以外は同一
+rem 無限ループ部分 一部文面が異なること、bot連携コードがあること以外は同一
 :loop
 	call setting.bat
 	rem 自動再起動
@@ -53,6 +53,9 @@ rem 無限ループ部分 一部文面が異なる以外は同一
 	) else (
 		echo [!DATE! !TIME!]サーバーダウンを検出しました。自動的に再起動します。
 		echo [!DATE! !TIME!]サーバーダウンを検出しました。自動的に再起動します。 >> autostart_log.txt
+		if !world_monitor_link! == 1 (
+			echo サーバーダウンを検出しました。現在復旧中です。しばらくお待ちください。 > file_io/out.txt
+		) 
 		if not exist !autosave! (
 			echo [!DATE! !TIME!]!autosave!が見つかりません。!serversave!をコピーします。
 			echo [!DATE! !TIME!]!autosave!が見つかりません。!serversave!をコピーします。 >> autostart_log.txt
@@ -64,6 +67,9 @@ rem 無限ループ部分 一部文面が異なる以外は同一
 		start !startfile!
 		echo [!DATE! !TIME!]サーバーを起動しました。
 		echo [!DATE! !TIME!]サーバーを起動しました。 >> autostart_log.txt
+		if !world_monitor_link! == 1 (
+			echo サーバーが復旧しました。 > file_io/out.txt
+		) 
 		timeout /t 30 /nobreak >nul
 		if !pressspacekey! == 1 (
 			start module\space.vbs

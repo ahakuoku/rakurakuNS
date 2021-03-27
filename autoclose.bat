@@ -14,18 +14,30 @@ rem 自動終了部分
 set /p strt_check="メンテナンスを開始します。よろしいですか？（M/C/N）： "
 if "!strt_check!" == "m" (
 	rem メンテナンスの場合
+	if !world_monitor_link! == 1 (
+		echo まもなくメンテナンスです。サーバーに入らないでください。 > file_io/out.txt
+	) 
 	nettool -p !nettoolpass! -s !serverip! say "Maintenance soon."
 	echo [!DATE! !TIME!]メッセージを送信しました。自動再起動ツールは落としましたか？
 	timeout /t 30 /nobreak >nul
 	call module\autosave.bat
+	if !world_monitor_link! == 1 (
+		echo ただいまメンテナンス中です。メンテナンス中は接続できる場合がありますが入らないでください。 > file_io/out.txt
+	) 
 	nettool -p !nettoolpass! -s !serverip! say "Maintenance start."
 	nettool -p !nettoolpass! -s !serverip! shutdown
 	) else if "!strt_check!"=="c" ( 
 	rem サーバー終了の場合
+	if !world_monitor_link! == 1 (
+		echo まもなくサーバーが終了します。これからのログインはおやめください。 > file_io/out.txt
+	) 
 	nettool -p !nettoolpass! -s !serverip! say "Server close soon."
 	echo [!DATE! !TIME!]メッセージを送信しました。自動再起動ツールは落としましたか？
 	timeout /t 30 /nobreak >nul
 	call module\autosave.bat
+	if !world_monitor_link! == 1 (
+		echo サーバーは終了しました。皆様のご参加ありがとうございました。 > file_io/out.txt
+	) 
 	nettool -p !nettoolpass! -s !serverip! say "Server closed. Thank you for playing at Server."
 	nettool -p !nettoolpass! -s !serverip! shutdown
 ) else (

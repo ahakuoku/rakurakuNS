@@ -14,5 +14,6 @@ set ban-ip2=""
 set ban-ip3=""
 set ban-ip4=""
 set ban-ip5=""
+set world_monitor_link=0
 
 rem 詳細は https://github.com/ahakuoku/rakurakuNS/blob/main/readme.md を参照してください。
