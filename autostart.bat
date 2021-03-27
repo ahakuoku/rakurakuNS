@@ -65,8 +65,8 @@ rem 無限ループ部分 一部文面が異なること、bot連携コードがあること以外は同一
 		start !startfile!
 		echo [!DATE! !TIME!]サーバーを起動しました。
 		echo [!DATE! !TIME!]サーバーを起動しました。 >> autostart_log.txt
-		call module\Discord.bat サーバーが復旧しました。
 		timeout /t 30 /nobreak >nul
+		call module\Discord.bat サーバーが復旧しました。
 		if !pressspacekey! == 1 (
 			start module\space.vbs
 			timeout /t 30 /nobreak >nul

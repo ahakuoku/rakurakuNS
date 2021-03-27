@@ -22,7 +22,7 @@ if "!strt_check!" == "m" (
 	call module\Discord.bat ただいまメンテナンス中です。メンテナンス中は接続できる場合がありますが入らないでください。
 	nettool -p !nettoolpass! -s !serverip! say "Maintenance start."
 	nettool -p !nettoolpass! -s !serverip! shutdown
-	) else if "!strt_check!"=="c" ( 
+) else if "!strt_check!"=="c" ( 
 	rem サーバー終了の場合
 	call module\Discord.bat まもなくサーバーが終了します。これからのログインはおやめください。
 	nettool -p !nettoolpass! -s !serverip! say "Server close soon."
