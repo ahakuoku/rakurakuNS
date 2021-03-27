@@ -1,4 +1,4 @@
-rem è¨­å®š
+rem İ’è
 set usingnettool=0
 set nettoolpass=""
 set startfile=sim-WinGDI64-OTRP.exe
@@ -16,4 +16,4 @@ set ban-ip4=""
 set ban-ip5=""
 set world_monitor_link=0
 
-rem è©³ç´°ã¯ https://github.com/ahakuoku/rakurakuNS/blob/main/readme.md ã‚’å‚ç…§ã—ã¦ãã ã•ã„ã€‚
+rem Ú×‚Í https://github.com/ahakuoku/rakurakuNS/blob/main/readme.md ‚ğQÆ‚µ‚Ä‚­‚¾‚³‚¢B

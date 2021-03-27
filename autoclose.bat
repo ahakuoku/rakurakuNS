@@ -1,48 +1,48 @@
 @echo off
 setlocal enabledelayedexpansion
-chcp 65001
+cd/d %~dp0
 call setting.bat
-rem ã“ã“ã¾ã§ãŠã¾ã˜ãªã„
-rem è¨­å®šæ¬¡ç¬¬ã§å¼¾ã
+rem ‚±‚±‚Ü‚Å‚¨‚Ü‚¶‚È‚¢
+rem Ý’èŽŸ‘æ‚Å’e‚­
 if !usingnettool! == 0 (
-	echo ã“ã®batã¯setting.batå†…ã®usingnettoolã‚’1ã«ã—ãªã„ã¨ä½¿ç”¨ã§ãã¾ã›ã‚“ã€‚Enterã‚­ãƒ¼ã‚’æŠ¼ã™ã¨çµ‚äº†ã—ã¾ã™ã€‚
+	echo ‚±‚Ìbat‚Ísetting.bat“à‚Ìusingnettool‚ð1‚É‚µ‚È‚¢‚ÆŽg—p‚Å‚«‚Ü‚¹‚ñBEnterƒL[‚ð‰Ÿ‚·‚ÆI—¹‚µ‚Ü‚·B
 	pause >nul
 	exit /b 0
 ) 
 
-rem è‡ªå‹•çµ‚äº†éƒ¨åˆ†
-set /p strt_check="ãƒ¡ãƒ³ãƒ†ãƒŠãƒ³ã‚¹ã‚’é–‹å§‹ã—ã¾ã™ã€‚ã‚ˆã‚ã—ã„ã§ã™ã‹ï¼Ÿï¼ˆM/C/Nï¼‰ï¼š "
+rem Ž©“®I—¹•”•ª
+set /p strt_check="ƒƒ“ƒeƒiƒ“ƒX‚ðŠJŽn‚µ‚Ü‚·B‚æ‚ë‚µ‚¢‚Å‚·‚©HiM/C/NjF "
 if "!strt_check!" == "m" (
-	rem ãƒ¡ãƒ³ãƒ†ãƒŠãƒ³ã‚¹ã®å ´åˆ
+	rem ƒƒ“ƒeƒiƒ“ƒX‚Ìê‡
 	if !world_monitor_link! == 1 (
-		echo ã¾ã‚‚ãªããƒ¡ãƒ³ãƒ†ãƒŠãƒ³ã‚¹ã§ã™ã€‚ã‚µãƒ¼ãƒãƒ¼ã«å…¥ã‚‰ãªã„ã§ãã ã•ã„ã€‚ > file_io/out.txt
+		echo ‚Ü‚à‚È‚­ƒƒ“ƒeƒiƒ“ƒX‚Å‚·BƒT[ƒo[‚É“ü‚ç‚È‚¢‚Å‚­‚¾‚³‚¢B > file_io/out.txt
 	) 
 	nettool -p !nettoolpass! -s !serverip! say "Maintenance soon."
-	echo [!DATE! !TIME!]ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’é€ä¿¡ã—ã¾ã—ãŸã€‚è‡ªå‹•å†èµ·å‹•ãƒ„ãƒ¼ãƒ«ã¯è½ã¨ã—ã¾ã—ãŸã‹ï¼Ÿ
+	echo [!DATE! !TIME!]ƒƒbƒZ[ƒW‚ð‘—M‚µ‚Ü‚µ‚½BŽ©“®Ä‹N“®ƒc[ƒ‹‚Í—Ž‚Æ‚µ‚Ü‚µ‚½‚©H
 	timeout /t 30 /nobreak >nul
 	call module\autosave.bat
 	if !world_monitor_link! == 1 (
-		echo ãŸã ã„ã¾ãƒ¡ãƒ³ãƒ†ãƒŠãƒ³ã‚¹ä¸­ã§ã™ã€‚ãƒ¡ãƒ³ãƒ†ãƒŠãƒ³ã‚¹ä¸­ã¯æŽ¥ç¶šã§ãã‚‹å ´åˆãŒã‚ã‚Šã¾ã™ãŒå…¥ã‚‰ãªã„ã§ãã ã•ã„ã€‚ > file_io/out.txt
+		echo ‚½‚¾‚¢‚Üƒƒ“ƒeƒiƒ“ƒX’†‚Å‚·Bƒƒ“ƒeƒiƒ“ƒX’†‚ÍÚ‘±‚Å‚«‚éê‡‚ª‚ ‚è‚Ü‚·‚ª“ü‚ç‚È‚¢‚Å‚­‚¾‚³‚¢B > file_io/out.txt
 	) 
 	nettool -p !nettoolpass! -s !serverip! say "Maintenance start."
 	nettool -p !nettoolpass! -s !serverip! shutdown
 	) else if "!strt_check!"=="c" ( 
-	rem ã‚µãƒ¼ãƒãƒ¼çµ‚äº†ã®å ´åˆ
+	rem ƒT[ƒo[I—¹‚Ìê‡
 	if !world_monitor_link! == 1 (
-		echo ã¾ã‚‚ãªãã‚µãƒ¼ãƒãƒ¼ãŒçµ‚äº†ã—ã¾ã™ã€‚ã“ã‚Œã‹ã‚‰ã®ãƒ­ã‚°ã‚¤ãƒ³ã¯ãŠã‚„ã‚ãã ã•ã„ã€‚ > file_io/out.txt
+		echo ‚Ü‚à‚È‚­ƒT[ƒo[‚ªI—¹‚µ‚Ü‚·B‚±‚ê‚©‚ç‚ÌƒƒOƒCƒ“‚Í‚¨‚â‚ß‚­‚¾‚³‚¢B > file_io/out.txt
 	) 
 	nettool -p !nettoolpass! -s !serverip! say "Server close soon."
-	echo [!DATE! !TIME!]ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’é€ä¿¡ã—ã¾ã—ãŸã€‚è‡ªå‹•å†èµ·å‹•ãƒ„ãƒ¼ãƒ«ã¯è½ã¨ã—ã¾ã—ãŸã‹ï¼Ÿ
+	echo [!DATE! !TIME!]ƒƒbƒZ[ƒW‚ð‘—M‚µ‚Ü‚µ‚½BŽ©“®Ä‹N“®ƒc[ƒ‹‚Í—Ž‚Æ‚µ‚Ü‚µ‚½‚©H
 	timeout /t 30 /nobreak >nul
 	call module\autosave.bat
 	if !world_monitor_link! == 1 (
-		echo ã‚µãƒ¼ãƒãƒ¼ã¯çµ‚äº†ã—ã¾ã—ãŸã€‚çš†æ§˜ã®ã”å‚åŠ ã‚ã‚ŠãŒã¨ã†ã”ã–ã„ã¾ã—ãŸã€‚ > file_io/out.txt
+		echo ƒT[ƒo[‚ÍI—¹‚µ‚Ü‚µ‚½BŠF—l‚Ì‚²ŽQ‰Á‚ ‚è‚ª‚Æ‚¤‚²‚´‚¢‚Ü‚µ‚½B > file_io/out.txt
 	) 
 	nettool -p !nettoolpass! -s !serverip! say "Server closed. Thank you for playing at Server."
 	nettool -p !nettoolpass! -s !serverip! shutdown
 ) else (
-	rem ãã‚Œä»¥å¤–ã®å ´åˆ
-	echo "!strt_check!ï¼šå‡¦ç†ã‚’ä¸­æ­¢ã—ã¾ã—ãŸã€‚"
+	rem ‚»‚êˆÈŠO‚Ìê‡
+	echo "!strt_check!Fˆ—‚ð’†Ž~‚µ‚Ü‚µ‚½B"
 	pause >nul
 	exit /b 0
 ) 
