@@ -12,7 +12,7 @@ SET M=%T:~3,2%
 SET S=%T:~6,2%
 SET L=%T:~9,2%
 
-rem --8�i�΍�
+rem --8進対策
 set /a H=1%H%-100
 set /a M=1%M%-100
 set /a S=1%S%-100
@@ -25,11 +25,11 @@ SET M1=%T1:~3,2%
 SET S1=%T1:~6,2%
 SET L1=%T1:~9,2%
 
-rem --8�i�΍�
+rem --8進対策
 set /a H1=1%H1%-100
 set /a M1=1%M1%-100
 set /a S1=1%S1%-100
-rem --�I�����Ԃ̌v�Z
+rem --終了時間の計算
 SET /a H2=H1-H
 
 SET /a M2=M1-M
@@ -44,7 +44,7 @@ SET /a L2=L1-L
 if %L2% LSS 0 set /a S2=S2-1
 if %L2% LSS 0 set /a L2=L2+100
 
-rem �񂯂������\��
+rem 二けた強制表示
 rem if %L2% LSS 10 set L2=0%L2%
 
 SET /a DPS=%H2%*3600+%M2%*60+%S2%
@@ -56,8 +56,8 @@ set DPS_STAMP2=%DPS_STAMP%.%L2%
 goto EOF
 
 :PRINT 
-echo �J�n���ԁF%T%
-echo �I�����ԁF%T1%
-echo �o�ߎ��ԁF%DPS_STAMP%
-echo �o�ߕb���F%DPS2%
+echo 開始時間：%T%
+echo 終了時間：%T1%
+echo 経過時間：%DPS_STAMP%
+echo 経過秒数：%DPS2%
 :EOF
