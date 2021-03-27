@@ -53,9 +53,7 @@ rem 無限ループ部分 一部文面が異なること、bot連携コードがあること以外は同一
 	) else (
 		echo [!DATE! !TIME!]サーバーダウンを検出しました。自動的に再起動します。
 		echo [!DATE! !TIME!]サーバーダウンを検出しました。自動的に再起動します。 >> autostart_log.txt
-		if !world_monitor_link! == 1 (
-			echo サーバーダウンを検出しました。現在復旧中です。しばらくお待ちください。 > file_io/out.txt
-		) 
+		call module\Discord.bat サーバーダウンを検出しました。現在復旧中です。しばらくお待ちください。
 		if not exist !autosave! (
 			echo [!DATE! !TIME!]!autosave!が見つかりません。!serversave!をコピーします。
 			echo [!DATE! !TIME!]!autosave!が見つかりません。!serversave!をコピーします。 >> autostart_log.txt
@@ -67,9 +65,7 @@ rem 無限ループ部分 一部文面が異なること、bot連携コードがあること以外は同一
 		start !startfile!
 		echo [!DATE! !TIME!]サーバーを起動しました。
 		echo [!DATE! !TIME!]サーバーを起動しました。 >> autostart_log.txt
-		if !world_monitor_link! == 1 (
-			echo サーバーが復旧しました。 > file_io/out.txt
-		) 
+		call module\Discord.bat サーバーが復旧しました。
 		timeout /t 30 /nobreak >nul
 		if !pressspacekey! == 1 (
 			start module\space.vbs

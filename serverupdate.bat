@@ -23,10 +23,12 @@ rem サーバーをアップデート
 
 set /p strt_check="サーバーの本体更新を開始します。よろしいですか？（Y/N）： "
 if "!strt_check!" == "y" (
+	call module\Discord.bat まもなくメンテナンスです。これからのログインはおやめください。
 	nettool -p !nettoolpass! -s !serverip! say "Maintenance soon."
 	echo [!DATE! !TIME!]メッセージを送信しました。自動再起動ツールは落としましたか？
 	timeout /t 30 /nobreak >nul
 	call module\autosave.bat
+	call module\Discord.bat ただいまメンテナンス中です。メンテナンス中は接続できる場合がありますが入らないでください。
 	nettool -p !nettoolpass! -s !serverip! say "Maintenance start."
 	nettool -p !nettoolpass! -s !serverip! shutdown
 	timeout /t 5 /nobreak >nul
