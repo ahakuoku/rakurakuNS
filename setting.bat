@@ -15,5 +15,6 @@ set ban_address_3=""
 set ban_address_4=""
 set ban_address_5=""
 set world_monitor_link=0
+set world_monitor_folder=
 
 rem Ú×‚Í https://github.com/ahakuoku/rakurakuNS/blob/main/readme.md ‚ğQÆ‚µ‚Ä‚­‚¾‚³‚¢B
