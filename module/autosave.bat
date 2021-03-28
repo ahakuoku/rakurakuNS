@@ -99,6 +99,6 @@ ren autosave\autosave_4.sve autosave_5.sve
 ren autosave\autosave_3.sve autosave_4.sve
 ren autosave\autosave_2.sve autosave_3.sve
 ren autosave\autosave_1.sve autosave_2.sve
-copy !serversave! autosave\autosave_1.sve
-nettool -p !nettoolpass! -s !serverip! force-sync
+copy !server_address! autosave\autosave_1.sve
+nettool -p !nettool_password! -s !server_address! force-sync
 echo [!DATE! !TIME!]オートセーブしました。
