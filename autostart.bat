@@ -35,11 +35,11 @@ if not errorlevel 1  (
 	rem 会社自動ロック・自動BAN
 	if !use_nettool! == 1 (
 		nettool -p !nettool_password! -s !server_address! lock-company 0 !topmost_company_password!
-		nettool -p !nettool_password! -s !server_address! ban_address_ !ban_address_1!
-		nettool -p !nettool_password! -s !server_address! ban_address_ !ban_address_2!
-		nettool -p !nettool_password! -s !server_address! ban_address_ !ban_address_3!
-		nettool -p !nettool_password! -s !server_address! ban_address_ !ban_address_4!
-		nettool -p !nettool_password! -s !server_address! ban_address_ !ban_address_5!
+		nettool -p !nettool_password! -s !server_address! ban-ip !ban_address_1!
+		nettool -p !nettool_password! -s !server_address! ban-ip !ban_address_2!
+		nettool -p !nettool_password! -s !server_address! ban-ip !ban_address_3!
+		nettool -p !nettool_password! -s !server_address! ban-ip !ban_address_4!
+		nettool -p !nettool_password! -s !server_address! ban-ip !ban_address_5!
 	) 
 ) 
 rem 無限ループ部分 一部文面が異なること、bot連携コードがあること以外は同一
@@ -72,12 +72,12 @@ rem 無限ループ部分 一部文面が異なること、bot連携コードがあること以外は同一
 			timeout /t 30 /nobreak >nul
 		) 
 		if !use_nettool! == 1 (
-			nettool -p !nettool_password! -s !server_address! lock-company 0 !topmost_company_password!
-			nettool -p !nettool_password! -s !server_address! ban_address_ !ban_address_1!
-			nettool -p !nettool_password! -s !server_address! ban_address_ !ban_address_2!
-			nettool -p !nettool_password! -s !server_address! ban_address_ !ban_address_3!
-			nettool -p !nettool_password! -s !server_address! ban_address_ !ban_address_4!
-			nettool -p !nettool_password! -s !server_address! ban_address_ !ban_address_5!
+		nettool -p !nettool_password! -s !server_address! lock-company 0 !topmost_company_password!
+		nettool -p !nettool_password! -s !server_address! ban-ip !ban_address_1!
+		nettool -p !nettool_password! -s !server_address! ban-ip !ban_address_2!
+		nettool -p !nettool_password! -s !server_address! ban-ip !ban_address_3!
+		nettool -p !nettool_password! -s !server_address! ban-ip !ban_address_4!
+		nettool -p !nettool_password! -s !server_address! ban-ip !ban_address_5!
 		) 
 	) 
 goto loop

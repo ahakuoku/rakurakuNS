@@ -21,10 +21,10 @@ if "!launch_file!" == "" (
 	) 
 ) 
 if "!server_save!" == "" (
-	if "!serverfile!" == "" (
+	if "!serversave!" == "" (
 		set server_save=server13353-network.sve
 	) else (
-		set server_save=!serverfile!
+		set server_save=!serversave!
 	) 
 ) 
 if "!load_save!" == "" (
