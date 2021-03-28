@@ -34,7 +34,7 @@ if "!load_save!" == "" (
 		set load_save=!autosave!
 	) 
 ) 
-if "!chack_exe!" == "" (
+if "!check_exe!" == "" (
 	if "!exename!" == "" (
 		set check_exe="sim-WinGDI64-OTRP.exe"
 	) else (

@@ -5,7 +5,7 @@ call module\setting_conv.bat
 rem ここまでおまじない
 rem 初回起動
 rem 鯖が動いてるかチェック
-tasklist | find !chack_exe! > nul
+tasklist | find !check_exe! > nul
 if not errorlevel 1  (
 	echo [!DATE! !TIME!]サーバーは動いています。
 	timeout /t 10 /nobreak >nul
@@ -46,7 +46,7 @@ rem 無限ループ部分 一部文面が異なること、bot連携コードがあること以外は同一
 :loop
 	call module\setting_conv.bat
 	rem 自動再起動
-	tasklist | find !chack_exe! > nul
+	tasklist | find !check_exe! > nul
 	if not errorlevel 1  (
 		echo [!DATE! !TIME!]サーバーは動いています。
 		timeout /t 10 /nobreak >nul
