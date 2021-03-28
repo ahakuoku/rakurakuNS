@@ -1,6 +1,6 @@
 @echo off
 setlocal enabledelayedexpansion
-cd/d %~dp0
+cd %~dp0
 call module\setting_conv.bat
 rem ‚±‚±‚Ü‚Å‚¨‚Ü‚¶‚È‚¢
 rem İ’èŸ‘æ‚Å’e‚­
