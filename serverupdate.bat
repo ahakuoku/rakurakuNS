@@ -1,7 +1,7 @@
 @echo off
 setlocal enabledelayedexpansion
 cd/d %~dp0
-call setting.bat
+call module\setting_conv.bat
 rem ‚±‚±‚Ü‚Å‚¨‚Ü‚¶‚È‚¢
 rem İ’èŸ‘æ‚Å’e‚­
 if !use_nettool! == 0 (

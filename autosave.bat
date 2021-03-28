@@ -1,7 +1,7 @@
 @echo off
 setlocal enabledelayedexpansion
 cd/d %~dp0
-call setting.bat
+call module\setting_conv.bat
 rem ここまでおまじない
 rem 設定次第で弾く
 if !use_nettool! == 0 (
@@ -18,7 +18,7 @@ if !autosave_interval! lss 60 (
 rem 無限ループ部分
 :loop
 	rem 設定再読み込み→設定秒数から30秒引く
-	call setting.bat
+	call module\setting_conv.bat
 	set /a interval=!autosave_interval!-30
 	rem メッセージ送信→30秒待機
 	call module\Discord.bat まもなくオートセーブです。サーバーに入らないでください。
