@@ -17,7 +17,7 @@ if "!new_filename!" == "n" (
 
 rem サーバーをアップデート
 
-set /p strt_check="サーバーの本体更新を開始します。よろしいですか？（Y/N）： "
+set /p strt_check="サーバーの本体更新を開始します。よろしいですか？（y/n）： "
 if "!strt_check!" == "y" (
 	call module\Discord.bat まもなくメンテナンスです。これからのログインはおやめください。
 	nettool -p !nettool_password! -s !server_address! say "Maintenance soon."
