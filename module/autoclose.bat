@@ -7,7 +7,7 @@ if !use_nettool! == 0 (
 ) 
 
 rem 自動終了部分
-set /p strt_check="メンテナンスを開始します。よろしいですか？（M/C/N）： "
+set /p strt_check="メンテナンスを開始します。よろしいですか？（m/c/n）： "
 if "!strt_check!" == "m" (
 	rem メンテナンスの場合
 	call module\Discord.bat まもなくメンテナンスです。これからのログインはおやめください。
