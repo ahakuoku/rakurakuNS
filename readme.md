@@ -42,14 +42,14 @@ setting.bat   … 設定ファイルです。使用する前にここを弄っ�
 # 使用方法
 
 ## setting.bat
-各種動作を設定するファイルです。使用する前にこちらを弄ってください。具体的な使用方法は下にあります。
+各種動作を設定するファイルです。使用する前にこちらを編集してください。具体的な使用方法は下にあります。
 ### Version 1.3.0以降
 1.3.0以降使用している新しい設定ファイルです。1.2.0以前では使用できません。
-- use_nettool … nettoolを使用するかどうかを設定します。0の場合は使用しません。
+- use_nettool … nettoolを使用するかどうかを設定します。1の場合に使用します。
 - nettool_password … nettoolのパスワードを設定します。usingnettoolが0の場合は使用しません。
 - launch_file … サーバーがクラッシュした際に起動するファイルを設定します。-server オプションをつけたショートカットを起動するなどに使用できます。
-- server_save … サーバーが読み込むセーブデーターを指定します。
-- load_save … サーバーを×ボタンで終了した場合に生成されるセーブデーターを指定します。
+- server_save … オートセーブでのセーブ先データー(server13353-network.sveなど)を指定します。
+- load_save … サーバーで読み込まれるセーブデーターを指定します。
 - check_exe … サーバーのファイル名を指定します。サーバーが動いているかのチェックに使用します。
 - server_address … サーバーのIPアドレスを指定します。
 - topmost_company_password … デフォルト会社のパスワードを指定します。usingnettoolが0の場合は使用しません。
@@ -60,14 +60,15 @@ setting.bat   … 設定ファイルです。使用する前にここを弄っ�
 - ban_address_3 … 同上
 - ban_address_4 … 同上
 - ban_address_5 … 同上
+- world_monitor_link … Simutrans world monitorとの連携機能(後述)を使用するかどうか設定します。1の場合に使用します。
 
 ### Version 1.2.0以前
 1.3.0以前の古い設定ファイルです。1.3.0以降でも引き続き使用できますが、1.3.0以降で使用できる設定と同等の設定があった場合は新しい識別子の方が優先されます。
-- usingnettool	 … nettoolを使用するかどうかを設定します。0の場合は使用しません。
+- usingnettool	 … nettoolを使用するかどうかを設定します。1の場合に使用します。
 - nettoolpass	 … nettoolのパスワードを設定します。usingnettoolが0の場合は使用しません。
 - startfile	 … サーバーがクラッシュした際に起動するファイルを設定します。-server オプションをつけたショートカットを起動するなどに使用できます。
-- serversave	 … サーバーが読み込むセーブデーターを指定します。
-- autosave	 … サーバーを×ボタンで終了した場合に生成されるセーブデーターを指定します。
+- serversave	 … オートセーブでのセーブ先データー(server13353-network.sveなど)を指定します。
+- autosave	 … サーバーで読み込まれるセーブデーターを指定します。
 - exename		 … サーバーのファイル名を指定します。サーバーが動いているかのチェックに使用します。
 - serverip	 … サーバーのIPアドレスを指定します。
 - 0companypass	 … デフォルト会社のパスワードを指定します。usingnettoolが0の場合は使用しません。
@@ -91,6 +92,12 @@ setting.bat   … 設定ファイルです。使用する前にここを弄っ�
 
 ## serverupdate.bat
 サーバーの本体をアップデートします。古い本体はserver_old.exeとしてバックアップされます。
+
+# Simutrans world monitorとの連携機能
+Version 1.3.0以降では[Simutrans world monitor](https://github.com/teamhimeh/simutrans_world_monitor)との連携機能が使用できます。連携機能を使用する事により
+- サーバーがクラッシュしたこと、復旧したことをDiscordで通知できる
+- オートセーブの予告をDiscordで自動的に行える  
+以上の機能が使用できるようになります。使用するには設定の`world_monitor_link`を1にする必要があります。
 
 # 謝辞
 - module/worktime.batはhttps://qiita.com/koryuohproject/items/815a1621bc34a223e4b9 のものを使用させていただきました。
