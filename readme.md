@@ -105,7 +105,10 @@ Version 1.3.0以降では[Simutrans world monitor](https://github.com/teamhimeh/
 ありがとうございます。
 
 # 更新履歴
-- 現在の最新バージョンは、version 1.3.0です。
+- 現在の最新バージョンは、version 1.3.1です。
+
+## Version 1.3.1(2021/03/31)
+- serverupdate.batでのサーバーのバージョンアップができない問題を修正しました。
 
 ## Version 1.3.0(2021/03/29)
 - [Simutrans world monitor](https://github.com/teamhimeh/simutrans_world_monitor) との連携機能を追加しました。使用するには設定ファイルに追加された`world_monitor_link`を1にする必要があります。
