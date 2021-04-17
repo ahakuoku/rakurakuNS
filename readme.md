@@ -1,3 +1,5 @@
+**こちらはbat版らくらくNSのページです。python版らくらくNS（開発中）のページは[こちら](https://github.com/ahakuoku/rakurakuNS-python/blob/main/readme.md)。**
+
 # らくらくNSとは？
 SimutransのNSを管理するツールです。
 - サーバーがクラッシュした場合に自動で再起動、それに付帯して必要な動作もすべて自動で行います。(一部要nettool)
@@ -9,7 +11,7 @@ SimutransのNSを管理するツールです。
 1. らくらくNSをダウンロードする  
 1. zipを解凍し、サーバーの実行ファイルが入っている所と同じディレクトリにbatとmoduleフォルダを入れる
 # ダウンロード
-ダウンロードはこちらから行えます。**(2020年11月18日　v1.2.0に更新)**  
+ダウンロードはこちらから行えます。**(2021年4月17日　v1.3.2に更新)**  
 https://github.com/ahakuoku/rakurakuNS/releases  
 1.0.1以前のバージョンはこちら  
 https://drive.google.com/drive/folders/1evLJx78f47vGNYuJIuvNgkNfmpygWu_A
@@ -105,7 +107,10 @@ Version 1.3.0以降では[Simutrans world monitor](https://github.com/teamhimeh/
 ありがとうございます。
 
 # 更新履歴
-- 現在の最新バージョンは、version 1.3.1です。
+- 現在の最新バージョンは、version 1.3.2です。
+
+## Version 1.3.2(2021/04/17)
+- セーブデータのバックアップ機能が動作しない問題を修正しました。
 
 ## Version 1.3.1(2021/03/31)
 - serverupdate.batでのサーバーのバージョンアップができない問題を修正しました。
