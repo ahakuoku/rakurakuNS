@@ -23,7 +23,7 @@ if "!strt_check!" == "y" (
 	nettool -p !nettool_password! -s !server_address! say "Maintenance soon."
 	echo [!DATE! !TIME!]メッセージを送信しました。自動再起動ツールは落としましたか？
 	timeout /t 30 /nobreak >nul
-	call module\autosave.bat
+	call module\save.bat
 	call module\Discord.bat ただいまメンテナンス中です。メンテナンス中は接続できる場合がありますが入らないでください。
 	nettool -p !nettool_password! -s !server_address! say "Maintenance start."
 	nettool -p !nettool_password! -s !server_address! shutdown
