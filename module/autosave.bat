@@ -14,14 +14,14 @@ if !autosave_interval! lss 60 (
 rem 設定秒数から30秒引く
 set /a interval=!autosave_interval!-30
 rem メッセージ送信→30秒待機
-call module\Discord.bat まもなくオートセーブです。サーバーに入らないでください。
+call module\Discord.bat まもなくオートセーブです。サーバーに入らないでください。 "{""description"":""オートセーブ完了まで、サーバーに入らないでください。"",""fields"":null,""title"":""まもなくオートセーブです。"",""color"":16760576,""footer"":null}"
 nettool -p !nettool_password! -s !server_address! say "Autosave soon."
 echo [!DATE! !TIME!]メッセージを送信しました。
 timeout /t 30 /nobreak >nul
 rem オートセーブ
 call module\worktime.bat START
 call module\save.bat
-call module\Discord.bat オートセーブが完了しました。
+call module\Discord.bat オートセーブが完了しました。 "{""description"":""サーバーに入る際は、過度なログインラッシュのないようにお願いします。"",""fields"":null,""title"":""オートセーブが完了しました。"",""color"":65280,""footer"":null}"
 call module\worktime.bat STOP
 rem 設定秒数からオートセーブにかかった秒数を減算
 set /a interval=!interval!-%DPS%
