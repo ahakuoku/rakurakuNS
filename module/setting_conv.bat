@@ -64,13 +64,13 @@ if "!company_password_1!" == "" (
 	) 
 ) 
 if "!company_password_1_number!" == "" (
-	set company_password_1_number=0
+	set company_password_1_number="0"
 ) 
 if "!company_password_2_number!" == "" (
-	set company_password_2_number=-1
+	set company_password_2_number="-1"
 ) 
 if "!company_password_3_number!" == "" (
-	set company_password_3_number=-1
+	set company_password_3_number="-1"
 ) 
 if "!autosave_interval!" == "" (
 	if "!autosaveinterval!" == "" (
