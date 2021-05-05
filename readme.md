@@ -48,21 +48,27 @@ setting.bat   … 設定ファイルです。使用する前にここを弄っ�
 ### Version 1.3.0以降
 1.3.0以降使用している新しい設定ファイルです。1.2.0以前では使用できません。
 - use_nettool … nettoolを使用するかどうかを設定します。1の場合に使用します。
-- nettool_password … nettoolのパスワードを設定します。usingnettoolが0の場合は使用しません。
+- nettool_password … nettoolのパスワードを設定します。use_nettoolが0の場合は使用しません。
 - launch_file … サーバーがクラッシュした際に起動するファイルを設定します。-server オプションをつけたショートカットを起動するなどに使用できます。
 - server_save … オートセーブでのセーブ先データー(server13353-network.sveなど)を指定します。
 - load_save … サーバーで読み込まれるセーブデーターを指定します。
 - check_exe … サーバーのファイル名を指定します。サーバーが動いているかのチェックに使用します。
 - server_address … サーバーのIPアドレスを指定します。
-- topmost_company_password … デフォルト会社のパスワードを指定します。usingnettoolが0の場合は使用しません。
-- autosave_interval … オートセーブの間隔を秒で指定します。usingnettoolが0の場合は使用しません。60未満にはできません。
+- topmost_company_password **（1.3.2以前）**… プレイヤー会社に相当する会社のパスワードを指定します。use_nettoolが0の場合は使用しません。
+- company_password_1 **（1.4.0以降）** … `company_password_1_number`で設定した会社に適用するパスワードを指定します。
+- company_password_2 **（1.4.0以降）** … `company_password_2_number`で設定した会社に適用するパスワードを指定します。
+- company_password_3 **（1.4.0以降）** … `company_password_3_number`で設定した会社に適用するパスワードを指定します。
+- company_password_1_number **（1.4.0以降）** … 指定したIDの会社に`company_password_1`で設定したパスワードを適用します。プレイヤー会社が0、公共事業が1で最大14まで指定できます。-1にすると使用しません。
+- company_password_2_number **（1.4.0以降）** … 指定したIDの会社に`company_password_2`で設定したパスワードを適用します。プレイヤー会社が0、公共事業が1で最大14まで指定できます。-1にすると使用しません。
+- company_password_3_number **（1.4.0以降）** … 指定したIDの会社に`company_password_3`で設定したパスワードを適用します。プレイヤー会社が0、公共事業が1で最大14まで指定できます。-1にすると使用しません。
+- autosave_interval … オートセーブの間隔を秒で指定します。use_nettoolが0の場合は使用しません。60未満にはできません。
 - conflict_error_avoidanc … 自動再起動の後にスペースキーを自動で押すかどうかを指定します。pak重複警告の回避に使用できます。1の場合に有効になります。
 - ban_address_1 … BANするIPアドレスを指定します。
 - ban_address_2 … 同上
 - ban_address_3 … 同上
 - ban_address_4 … 同上
 - ban_address_5 … 同上
-- world_monitor_link … Simutrans world monitorとの連携機能(後述)を使用するかどうか設定します。1の場合に使用します。
+- world_monitor_link … Simutrans world monitorとの連携機能(後述)を使用するかどうか設定します。1の場合はプレーンテキストで送信し、**（1.4.0以降）**2の場合はembedで送信します。
 
 ### Version 1.2.0以前
 1.3.0以前の古い設定ファイルです。1.3.0以降でも引き続き使用できますが、1.3.0以降で使用できる設定と同等の設定があった場合は新しい識別子の方が優先されます。
@@ -73,7 +79,7 @@ setting.bat   … 設定ファイルです。使用する前にここを弄っ�
 - autosave	 … サーバーで読み込まれるセーブデーターを指定します。
 - exename		 … サーバーのファイル名を指定します。サーバーが動いているかのチェックに使用します。
 - serverip	 … サーバーのIPアドレスを指定します。
-- 0companypass	 … デフォルト会社のパスワードを指定します。usingnettoolが0の場合は使用しません。
+- 0companypass	 … プレイヤー会社に相当する会社のパスワードを指定します。usingnettoolが0の場合は使用しません。
 - autosaveinterval … オートセーブの間隔を秒で指定します。usingnettoolが0の場合は使用しません。60未満にはできません。
 - pressspacekey	 … 自動再起動の後にスペースキーを自動で押すかどうかを指定します。pak重複警告の回避に使用できます。1の場合に有効になります。
 - ban-ip1		 … BANするIPアドレスを指定します。
@@ -98,8 +104,11 @@ setting.bat   … 設定ファイルです。使用する前にここを弄っ�
 # Simutrans world monitorとの連携機能
 Version 1.3.0以降では[Simutrans world monitor](https://github.com/teamhimeh/simutrans_world_monitor)との連携機能が使用できます。連携機能を使用する事により
 - サーバーがクラッシュしたこと、復旧したことをDiscordで通知できる
-- オートセーブの予告をDiscordで自動的に行える  
-以上の機能が使用できるようになります。使用するには設定の`world_monitor_link`を1にする必要があります。
+- オートセーブの予告をDiscordで自動的に行える
+
+
+以上の機能が使用できるようになります。使用するには設定ファイルの`world_monitor_link`を1もしくは2にする必要があります。  
+Simutrans world monitorのバージョンが1.5以上かつらくらくNSのバージョンが1.4.0以上であればembed送信も使用できます。その場合は設定ファイルの`world_monitor_link`を2にする必要があります。
 
 # 謝辞
 - module/worktime.batはhttps://qiita.com/koryuohproject/items/815a1621bc34a223e4b9 のものを使用させていただきました。
@@ -107,7 +116,15 @@ Version 1.3.0以降では[Simutrans world monitor](https://github.com/teamhimeh/
 ありがとうございます。
 
 # 更新履歴
-- 現在の最新バージョンは、version 1.3.2です。
+- 現在の最新バージョンは、version 1.4.0です。
+
+## Version 1.4.0(2021/05/05)
+- Simutrans world monitor連携機能においてembedでの送信が使用できるようになりました。設定ファイル中のworld_monitor_linkを2に設定すると使用する事ができます。
+- 会社ロック機能において、会社番号を指定可能にするとともに、最大3社まで会社ロック機能が使用できるようになりました。
+- nettool使用時にオートセーブ時にも会社ロックをするようにしました。
+- セーブデータバックアップのタイミングを変更しました。  
+これまでセーブデータのバックアップはオートセーブの直前に行われていましたが、今回の更新でオートセーブの30秒後に変更されます。  
+この変更により、バックアップされるセーブデータがオートセーブによるものになりやすくなりました。
 
 ## Version 1.3.2(2021/04/17)
 - セーブデータのバックアップ機能が動作しない問題を修正しました。
