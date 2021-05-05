@@ -1,3 +1,4 @@
+rem -*- coding: shift_jis -*-
 rem 設定次第で弾く
 call module\setting_conv.bat
 if !use_nettool! == 0 (
@@ -21,6 +22,9 @@ timeout /t 30 /nobreak >nul
 rem オートセーブ
 call module\worktime.bat START
 call module\save.bat
+rem バックアップまで30秒待つ
+timeout /t 30 /nobreak >nul
+call module\backup.bat
 call module\Discord.bat オートセーブが完了しました。 "{""description"":""サーバーに入る際は、過度なログインラッシュのないようにお願いします。"",""fields"":null,""title"":""オートセーブが完了しました。"",""color"":65280,""footer"":null}"
 call module\worktime.bat STOP
 rem 設定秒数からオートセーブにかかった秒数を減算

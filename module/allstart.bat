@@ -1,3 +1,4 @@
+rem -*- coding: shift_jis -*-
 set /p autosave_launch="オートセーブを同時起動しますか？（y/n）： "
 start autostart.bat
 if "!autosave_launch!" == "y" (

@@ -1,3 +1,4 @@
+rem -*- coding: shift_jis -*-
 rem nettoolを使用する設定において、会社IDが-1以外に設定されていた場合にのみ適用
 if !use_nettool! == 1 (
 	if not !company_password_1_number! == -1 (

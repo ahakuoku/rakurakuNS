@@ -1,3 +1,4 @@
+rem -*- coding: shift_jis -*-
 call setting.bat
 if "!use_nettool!" == "" (
 	if "!usingnettool!" == "" (

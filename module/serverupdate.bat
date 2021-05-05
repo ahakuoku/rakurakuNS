@@ -1,3 +1,4 @@
+rem -*- coding: shift_jis -*-
 rem İ’èŸ‘æ‚Å’e‚­
 call module\setting_conv.bat
 if !use_nettool! == 0 (
