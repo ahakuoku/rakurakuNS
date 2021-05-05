@@ -40,8 +40,8 @@ if not errorlevel 1  (
 		timeout /t 30 /nobreak >nul
 	) 
 	rem ‰ïĞ©“®ƒƒbƒNE©“®BAN
+	call module\company_locked.bat
 	if !use_nettool! == 1 (
-		nettool -p !nettool_password! -s !server_address! lock-company 0 !topmost_company_password!
 		nettool -p !nettool_password! -s !server_address! ban-ip !ban_address_1!
 		nettool -p !nettool_password! -s !server_address! ban-ip !ban_address_2!
 		nettool -p !nettool_password! -s !server_address! ban-ip !ban_address_3!
