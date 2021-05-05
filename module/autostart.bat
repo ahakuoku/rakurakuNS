@@ -15,7 +15,7 @@ if not errorlevel 1  (
 	) else (
 		echo [!DATE! !TIME!]サーバーダウンを検出しました。自動的に再起動します。
 		echo [!DATE! !TIME!]サーバーダウンを検出しました。自動的に再起動します。 >> autostart_log.txt
-		call module\Discord.bat サーバーダウンを検出しました。現在復旧中です。しばらくお待ちください。 "{""description"":""現在復旧中です。しばらくお待ちください。"",""fields"":null,""title"":""サーバーダウンを検出しました。"",""color"":16760576,""footer"":null}"
+		call module\Discord.bat サーバーダウンを検出しました。現在復旧中です。しばらくお待ちください。 "{""description"":""現在復旧中です。しばらくお待ちください。"",""fields"":null,""title"":""サーバーダウンを検出しました。"",""color"":16711680,""footer"":null}"
 	) 
 	rem セーブファイルチェック
 	if not exist !load_save! (
