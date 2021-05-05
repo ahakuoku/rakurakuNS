@@ -1,3 +1,4 @@
+rem -*- coding: shift_jis -*-
 rem 設定読み込み
 call module\setting_conv.bat
 rem 鯖が動いてるかチェック

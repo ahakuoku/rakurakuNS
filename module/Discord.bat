@@ -1,3 +1,4 @@
+rem -*- coding: utf-8 -*-
 chcp 65001
 rem このファイルのみエラー対策でUTF-8
 if !world_monitor_link! == 1 (
