@@ -55,6 +55,22 @@ if "!topmost_company_password!" == "" (
 		set topmost_company_password=!0companypass!
 	) 
 ) 
+if "!company_password_1!" == "" (
+	if "!topmost_company_password!" == "" (
+		set company_password_1=""
+	) else (
+		set company_password_1=!topmost_company_password!
+	) 
+) 
+if "!company_password_1_number!" == "" (
+	set company_password_1_number=0
+) 
+if "!company_password_2_number!" == "" (
+	set company_password_2_number=-1
+) 
+if "!company_password_3_number!" == "" (
+	set company_password_3_number=-1
+) 
 if "!autosave_interval!" == "" (
 	if "!autosaveinterval!" == "" (
 		set autosave_interval=""
@@ -103,4 +119,7 @@ if "!ban_address_5!" == "" (
 	) else (
 		set ban_address_5=!ban-ip5!
 	) 
+) 
+if "!world_monitor_link!" == "" (
+	set world_monitor_link=-0
 ) 

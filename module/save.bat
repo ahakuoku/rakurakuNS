@@ -101,4 +101,5 @@ ren autosave\autosave_2.sve autosave_3.sve
 ren autosave\autosave_1.sve autosave_2.sve
 copy !server_save! autosave\autosave_1.sve
 nettool -p !nettool_password! -s !server_address! force-sync
+call module\company_locked.bat
 echo [!DATE! !TIME!]オートセーブしました。
