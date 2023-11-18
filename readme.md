@@ -30,9 +30,9 @@ https://drive.google.com/drive/folders/1evLJx78f47vGNYuJIuvNgkNfmpygWu_A
 1. らくらくNSを起動している場合は、一旦終了する(サーバーを閉じる必要はありません)  
 1. らくらくNS関係のすべてのファイルを上書きする
 # 使用条件
-ahakuoku simutrans addon license version 3.1 (ASAL 3.1)を適用します。
+ahakuoku simutrans addon license version 3.2 (ASAL 3.2)を適用します。
 
-## ASAL 3.1全文
+## ASAL 3.2全文
 利用者は、次の条件を守ることでこのアドオン・ツール等（以下、本作品）を自由にご利用いただけます。
 
 ### していいこと
@@ -53,7 +53,7 @@ ahakuoku simutrans addon license version 3.1 (ASAL 3.1)を適用します。
 ### その他細則
 - Pakset配布の必要がある場合とは、NSやセーブデータ配布などのことを指します。
 - 本作品を利用したことによる損害は一切責任を負いません。
-- 本作品の作者は、本規約に違反したユーザーを除き、特定のユーザーに対して差別的な取り扱いを行ってはならないものとします。
+- 本作品の作者は、本規約に違反したユーザーを除き、特定のユーザーに対して不利に差別的な取り扱いを行ってはならないものとします。
 
 # 内容
 autoclose.bat … 自動でセーブしたうえでサーバーを終了します。  
