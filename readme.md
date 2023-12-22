@@ -1,4 +1,4 @@
-**こちらはbat版らくらくNSのページです。python版らくらくNS（開発中）のページは[こちら](https://github.com/ahakuoku/rakurakuNS-python/blob/main/readme.md)。**
+**こちらはらくらくNS（bat版）のページです。らくらくNS v2（開発中）のページは[こちら](https://github.com/ahakuoku/rakurakuNS-python/blob/main/readme.md)。**
 
 # らくらくNSとは？
 SimutransのNSを管理するツールです。
