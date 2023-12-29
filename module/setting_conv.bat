@@ -1,5 +1,10 @@
 rem -*- coding: shift_jis -*-
 call setting.bat
+rem アプリ名が長いと鯖落ち判定が常にがかかるバグへの対処
+set check_exe=!check_exe:~1,-1!
+set check_exe=!check_exe:~0,25!
+set check_exe="!check_exe!"
+rem ここ以下旧形式設定ファイル変換、デフォルト設定用
 if "!use_nettool!" == "" (
 	if "!usingnettool!" == "" (
 		set use_nettool=0
@@ -123,4 +128,7 @@ if "!ban_address_5!" == "" (
 ) 
 if "!world_monitor_link!" == "" (
 	set world_monitor_link=-0
+) 
+if "!discord_autosave_notice!" == "" (
+	set discord_autosave_notice=-0
 ) 

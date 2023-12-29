@@ -20,5 +20,6 @@ set ban_address_3=""
 set ban_address_4=""
 set ban_address_5=""
 set world_monitor_link=0
+set discord_autosave_notice=0
 
 rem Ú×‚Í https://github.com/ahakuoku/rakurakuNS/blob/main/readme.md ‚ğQÆ‚µ‚Ä‚­‚¾‚³‚¢B
