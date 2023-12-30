@@ -34,6 +34,18 @@ if "!strt_check!" == "m" (
 	nettool -p !nettool_password! -s !server_address! shutdown
 	timeout /t 30 /nobreak >nul
 	call module\backup.bat
+) else if "!strt_check!"=="r" ( 
+	rem 再起動の場合
+	call module\Discord.bat まもなくサーバーが再起動します。これからのログインはおやめください。 "{""description"":""これからのログインはおやめください。"",""fields"":null,""title"":""まもなくサーバーが再起動します。"",""color"":16760576,""footer"":null}"
+	nettool -p !nettool_password! -s !server_address! say "Server restart soon."
+	echo [!DATE! !TIME!]メッセージを送信しました。
+	timeout /t 30 /nobreak >nul
+	call module\save.bat
+	call module\Discord.bat ただいま再起動中です。再起動までしばらくお待ちください。 "{""description"":""再起動までしばらくお待ちください。"",""fields"":null,""title"":""ただいま再起動中です。"",""color"":65280,""footer"":null}"
+	nettool -p !nettool_password! -s !server_address! say "Server restart."
+	nettool -p !nettool_password! -s !server_address! shutdown
+	timeout /t 30 /nobreak >nul
+	call module\backup.bat
 ) else (
 	rem それ以外の場合
 	echo "!strt_check!：処理を中止しました。"
