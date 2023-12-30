@@ -1,4 +1,6 @@
 @echo off
 setlocal enabledelayedexpansion
 cd %~dp0
-call module\serverupdate.bat
+rem ‚±‚±‚Ü‚Å‚¨‚Ü‚¶‚È‚¢
+
+call module\allstart.bat
