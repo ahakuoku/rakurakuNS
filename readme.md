@@ -99,13 +99,14 @@ nettoolのパスワードを設定します。`use_nettool`が`0`の場合は使
 **（1.4.0以降）** `company_password_3_number`で設定した会社に適用するパスワードを指定します。
 #### company_password_1_number
 **（1.4.0以降）** 指定したIDの会社に`company_password_1`で設定したパスワードを適用します。  
-プレイヤー会社が`0`、公共事業が`1`で最大`14`まで指定できます。`-1`にすると使用しません。
+プレイヤー会社が`0`、公共事業が`1`で最大`14`まで指定できます。`-1`にすると使用しません。  
+**セーブデータに存在しない会社番号を入れるとSimutransがクラッシュしますのでご注意ください**
 #### company_password_2_number
 **（1.4.0以降）** 指定したIDの会社に`company_password_2`で設定したパスワードを適用します。  
-プレイヤー会社が`0`、公共事業が`1`で最大`14`まで指定できます。`-1`にすると使用しません。
+残りは`company_password_1_number`と同一です。
 #### company_password_3_number
 **（1.4.0以降）** 指定したIDの会社に`company_password_3`で設定したパスワードを適用します。  
-プレイヤー会社が`0`、公共事業が`1`で最大`14`まで指定できます。`-1`にすると使用しません。
+残りは`company_password_1_number`と同一です。
 #### autosave_interval
 オートセーブの間隔を秒で指定します。`use_nettool`が`0`の場合は使用しません。`60`未満にはできません。
 #### conflict_error_avoidanc
