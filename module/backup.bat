@@ -1,5 +1,6 @@
 rem -*- coding: shift_jis -*-
 rem バックアップ
+If not exist autosave mkdir autosave
 del /q autosave\autosave_100.sve
 ren autosave\autosave_99.sve autosave_100.sve
 ren autosave\autosave_98.sve autosave_99.sve
