@@ -29,8 +29,8 @@ if "!strt_check!" == "y" (
 	nettool -p !nettool_password! -s !server_address! say "Maintenance start."
 	nettool -p !nettool_password! -s !server_address! shutdown
 	timeout /t 5 /nobreak >nul
-	ren %check_exe% server_old.exe
-	ren %new_filename% %check_exe%	
+	ren %old_exe% server_old.exe
+	ren %new_filename% %old_exe%	
 	start autostart.bat
 ) else (
 	echo "!strt_check!Fˆ—‚ğ’†~‚µ‚Ü‚µ‚½B"
