@@ -1,5 +1,7 @@
 rem -*- coding: shift_jis -*-
 call setting.bat
+rem 更新前の本体ファイル名が長いとserverupdate.batが正常に動作しないバグへの対処
+set old_exe=!check_exe!
 rem アプリ名が長いと鯖落ち判定が常にがかかるバグへの対処
 set check_exe=!check_exe:~1,-1!
 set check_exe=!check_exe:~0,25!
