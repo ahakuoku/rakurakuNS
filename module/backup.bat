@@ -6,13 +6,13 @@ if not exist autosave (
 if exist autosave\autosave_100.sve (
     del /q autosave\autosave_100.sve
 ) 
-set !autosave_backup_before!=99
-set !autosave_backup_after!=100
+set autosave_backup_before=99
+set autosave_backup_after=100
 for /l %%i in (1,1,99) do (
     if exist autosave\autosave_%%i.sve (
         ren autosave\autosave_%%i.sve autosave_%autosave_backup_after%.sve
     ) 
-    set /a !autosave_backup_before!-=1
-    set /a !autosave_backup_after!-=1
+    set /a autosave_backup_before-=1
+    set /a autosave_backup_after-=1
 ) 
 copy !server_save! autosave\autosave_1.sve
